@@ -5,48 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to AI Website</title>
-    <style>
-        body {
-            background-color: #767676;
-        }
-        .container {
-            max-width: 600px;
-            margin: 200px auto; /* Center the container */
-            padding: 20px;
-            background-color: #dce0e0;
-            text-align: center;
-        }
-        .button-container {
-            margin-top: 20px;
-        }
-        .button {
-            background-color: rgb(6, 192, 62);
-            color: black;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            margin-right: 10px;
-            border-radius: 20px;
-        }
-        .icon-container {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
-        }
-        .icon {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 10px;
-        }
-        .icon img {
-            width: 100px; /* Adjust the size as needed */
-            height: 100px; /* Adjust the size as needed */
-        }
-    </style>
+    <link rel="stylesheet" href="css.css">
+    
 </head>
 <body>
     <div class="container">
@@ -64,55 +24,7 @@
         </div>
     </div>
 
-    <script>
-        let optionsData = []; // Array to store option data (name and URL)
 
-        function showOption() {
-            const optionsDiv = document.getElementById("options");
-            optionsDiv.style.display = "block";
-        }
-
-        function saveOption() {
-            const optionName = document.getElementById("optionName").value;
-            const optionURL = document.getElementById("optionURL").value;
-
-            // Save data to the optionsData array
-            optionsData.push({
-                name: optionName,
-                url: optionURL
-            });
-
-            // Clear input fields
-            document.getElementById("optionName").value = "";
-            document.getElementById("optionURL").value = "";
-
-            // Update the favicon display
-            updateFavicons();
-
-            // Hide the options div
-            const optionsDiv = document.getElementById("options");
-            optionsDiv.style.display = "none";
-        }
-
-        function updateFavicons() {
-            const faviconsDiv = document.getElementById("favicons");
-            faviconsDiv.innerHTML = ""; // Clear previous favicons
-
-            optionsData.forEach(option => {
-                const iconDiv = document.createElement("div");
-                iconDiv.className = "icon";
-
-                const faviconImg = document.createElement("img");
-                faviconImg.src = `https://www.google.com/s2/favicons?domain=${option.url}`;
-
-                const iconName = document.createElement("p");
-                iconName.textContent = option.name;
-
-                iconDiv.appendChild(faviconImg);
-                iconDiv.appendChild(iconName);
-                faviconsDiv.appendChild(iconDiv);
-            });
-        }
-    </script>
+    <script src="js.js"></script>
 </body>
 </html>

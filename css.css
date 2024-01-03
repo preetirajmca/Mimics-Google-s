@@ -1,0 +1,40 @@
+body {
+    background-color: #767676;
+}
+.container {
+    max-width: 600px;
+    margin: 200px auto; /* Center the container */
+    padding: 20px;
+    background-color: #dce0e0;
+    text-align: center;
+}
+.button-container {
+    margin-top: 20px;
+}
+.button {
+    background-color: rgb(6, 192, 62);
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 20px;
+}
+.icon-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+.icon img {
+    width: 100px; /* Adjust the size as needed */
+    height: 100px; /* Adjust the size as needed */
+}
